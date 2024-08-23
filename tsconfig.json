@@ -1,10 +1,26 @@
 {
-  "extends": "./common.tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist/dist-esm",
-    "baseUrl": "./src"
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "typeRoots": ["./node_modules/@types"],
-  "include": ["src/**/*", "src/assets/assets.d.ts"],
-  "exclude": ["dist", "node_modules"]
+  "include": [
+    "src"
+  ]
 }

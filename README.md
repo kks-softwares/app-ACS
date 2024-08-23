@@ -1,52 +1,34 @@
-# Calling Sample
+---
+page_type: sample
+languages:
+- javascript
+products:
+- azure
+- azure-communication-services
+---
 
-![Homepage](./Media/homepage-sample-calling.png)
+# Get Started with Composites
 
-## Overview
-
-This is a sample application to show how we can use the `@azure/communication-react` package to build a calling experience.
-Learn more about the [Azure Communication Services UI Library](https://azure.github.io/communication-ui-library/). 
-The client-side application is a React based user interface. Alongside this front-end is a NodeJS web application powered by ExpressJS that performs functionality like minting new user tokens for each call participant.
-
-Additional documentation for this sample can be found on [Microsoft Docs](https://docs.microsoft.com/azure/communication-services/samples/calling-hero-sample).
+For full instructions on how to build this code sample from scratch, look at [Quickstart: Get Started with Composites](https://azure.github.io/communication-ui-library/?path=/story/quickstarts-composites--page)
 
 ## Prerequisites
 
-- [Visual Studio Code (Stable Build)](https://code.visualstudio.com/Download)
-- [Node.js (12.18.4 and above)](https://nodejs.org/en/download/)
-- Create an Azure account with an active subscription. For details, see [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- Create an Azure Communication Services resource. For details, see [Create an Azure Communication Resource](https://docs.microsoft.com/azure/communication-services/quickstarts/create-communication-resource). You'll need to record your resource **connection string** for this quickstart.
+- An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)  .
+- [Node.js](https://nodejs.org/en/) Active LTS and Maintenance LTS versions (8.11.1 and 10.14.1 recommended).
+- An active Communication Services resource. [Create a Communication Services resource](https://docs.microsoft.com/azure/communication-services/quickstarts/create-communication-resource). You will need the endpoint value for the resource
+- An identity with both VoIP and Chat scopes. Generate an identity using the [Azure Portal](https://docs.microsoft.com/azure/communication-services/quickstarts/identity/quick-create-identity).
 
-## Before running the sample for the first time
+## Run the code
 
-1. Open an instance of PowerShell, Windows Terminal, Command Prompt, or equivalent, and navigate to the directory that you'd like to clone the sample to and clone the repo.
+1. Run `npm i` on the directory of the project to install dependencies
+2. Swap placeholders for identifiers in the code.
+    - Go to the `src` folder and find the `app.tsx` file.
+    - There input values for the `Endpoint_URL` for your resource and the `USER_ID` and `TOKEN` for the identity you created.
+    - Optional: You can update the display name to match a string value of your choice.
+    - Save the file.
+4. Run `npm run start`
 
-    ```shell
-    git clone https://github.com/Azure/communication-ui-library.git
-    ```
+Open your browser to ` http://localhost:3000`. You should see the following:
+![Composite End State](../media/CompositeEnd.png)
 
-1. Get the `Connection String` from the Azure portal. For more information on connection strings, see [Create an Azure Communication Resources](https://docs.microsoft.com/azure/communication-services/quickstarts/create-communication-resource)
-1. Once you get the `Connection String`, add the connection string to the **samples/Server/appsetting.json** file. Input your connection string in the variable: `ResourceConnectionString`.
-
-## Local run
-
-1. Install dependencies
-
-    ```bash
-    npm install
-    ```
-
-1. Start the calling app
-
-    ```bash
-    npm run start
-    ```
-
-    This will open a client server on port 3000 that serves the website files, and an api server on port 8080 that performs functionality like minting tokens for call participants.
-
-## Additional Reading
-
-- [Azure Communication Services - UI Library](https://azure.github.io/communication-ui-library/) - To learn more about what the `@azure/communication-react` package offers.
-- [Azure Communication Calling SDK](https://docs.microsoft.com/azure/communication-services/concepts/voice-video-calling/calling-sdk-features) - To learn more about the calling web sdk
-- [FluentUI](https://developer.microsoft.com/fluentui#/) - Microsoft powered UI library
-- [React](https://reactjs.org/) - Library for building user interfaces
+Feel free to style the composites to your desired size and layout inside of your application.
